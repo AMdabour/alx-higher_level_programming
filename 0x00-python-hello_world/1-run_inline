@@ -1,2 +1,2 @@
 #!/bin/bash
-echo 'print("welcome")' | python3
+echo $PYCODE | python3
