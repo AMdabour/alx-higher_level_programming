@@ -1,13 +1,16 @@
 #!/usr/bin/python3
 def safe_print_list(my_list=[], x=0):
-    try:
-        i, length = 0, 0
-        for j in my_list:
-            length += 1
-        while i < x and i < length:
-            print(f"{my_list[i]}", end='')
-            i += 1
-        print()
-        return i
-    except Exception as e:
-        print("An error occurred:", str(e))
+    count = 0
+    for i in my_list:
+        try:
+            print("{}".format(i), end="")
+            count += 1
+            if count == x:
+                break
+        except TypeError:
+            break
+    print()
+    if x > count:
+        return count
+    else:
+        return x
