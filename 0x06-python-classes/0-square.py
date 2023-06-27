@@ -2,6 +2,7 @@
 
 """define a class Square"""
 
+
 class Square:
 
     """an empty class named Square"""
