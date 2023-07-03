@@ -77,5 +77,6 @@ class Rectangle:
     def __repr__(self):
         """returns a valid python expression as string"""
 
-        return "Rectangle(" + str(self.__width)
-    + ", " + str(self.__height) + ")"
+        ret = "Rectangle(" + str(self.__width)
+        ret += ", " + str(self.__height) + ")"
+        return ret
