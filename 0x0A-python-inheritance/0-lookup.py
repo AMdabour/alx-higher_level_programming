@@ -1,6 +1,8 @@
+#!/usr/bin/python3
 
-"""define a modeule containing a function
-returns the list of available attributes
+"""
+define a function returns
+the list of available attributes
 and methods of an object
 """
 
@@ -8,4 +10,4 @@ and methods of an object
 def lookup(obj):
     """returns a list of the available attributes and methods"""
 
-    return list(dir(obj))
+    return (dir(obj))
