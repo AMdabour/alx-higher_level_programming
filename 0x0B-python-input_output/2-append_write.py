@@ -9,3 +9,4 @@ def append_write(filename="", text=""):
     """appends a string to  a file and returns nb_written"""
     with open(filename, 'a', encoding="utf-8") as f:
         nb_written = f.write(text)
+        return nb_written
