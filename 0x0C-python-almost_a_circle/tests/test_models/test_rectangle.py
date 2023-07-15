@@ -13,8 +13,8 @@ class test_rectangle_class(unittest.TestCase):
 
     def test_getter_setter(self):
         r = Rectangle(10, 2)
-        self.assertEqual(r.get_width(), 10)
-        r.set_width(5)
-        self.assertEqual(r.get_width(), 5)
+        self.assertEqual(r.width, 10)
+        r.width = 5
+        self.assertEqual(r.width, 5)
         with self.assertRaises(AttributeError):
             x = r.__width
