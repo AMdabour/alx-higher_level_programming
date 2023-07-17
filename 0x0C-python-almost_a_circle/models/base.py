@@ -31,7 +31,8 @@ class Base():
             list_objs == []
 
         filename = cls.__name__ + ".json"
-        jsonData = cls.to_json_string([obj.to_dictionary() for obj in list_objs])
+        jsonData = cls.to_json_string
+        ([obj.to_dictionary() for obj in list_objs])
 
         with open(filename, "w") as jsonFile:
             jsonFile.write(jsonData)
