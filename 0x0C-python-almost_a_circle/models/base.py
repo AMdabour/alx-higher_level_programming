@@ -57,7 +57,7 @@ class Base():
     @classmethod
     def load_from_file(cls):
         """returns a list of instances"""
-        filename = str(cls.__name) + ".json"
+        filename = str(cls.__name__) + ".json"
         try:
             with open(filename, "r") as jsonFile:
                 list_dicts = Base.from_json_string(jsonFile.read())
