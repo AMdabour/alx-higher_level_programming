@@ -12,12 +12,13 @@ database_name = sys.argv[3]
 
 if __name__ == "__main__":
     try:
-        conn = MySQLdb.connect(host="localhost", port=3306, user=mysql_username, passwd=mysql_password, db=database_name)
+        conn = MySQLdb.connect
+        (host="localhost", port=3306, user=mysql_username,
+            passwd=mysql_password, db=database_name)
         cur = conn.cursor()
         cur.execute("SELECT * FROM states ORDER BY states.id ASC")
         results = cur.fetchall()
-
-        for row  in results:
+        for row in results:
             print(row)
 
     except MySQLdb.Error as e:
