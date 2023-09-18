@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""a script that lists all states with a name equals to sys.argv[4] from the database hbtn_0e_0_usa"""
+"""a script that lists all states with a name equals
+to sys.argv[4] from the database hbtn_0e_0_usa"""
 import MySQLdb
 import sys
 
