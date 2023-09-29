@@ -6,5 +6,7 @@ import urllib.request
 import sys
 
 
-with urllib.request.urlopen(f"{sys.argv[1]}") as response:
-    print(f"{response.headers['X-Request-Id']}")
+req = urllib.request.Request(sys.argv[1])
+
+with urllib.request.urlopen(req) as response:
+    print(response.headers['X-Request-Id'])
