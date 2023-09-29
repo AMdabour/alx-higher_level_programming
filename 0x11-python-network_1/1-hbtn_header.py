@@ -7,4 +7,4 @@ import sys
 
 
 with urllib.request.urlopen(f"{sys.argv[1]}") as response:
-    print(f"{response.getheader('X-Request-Id')}")
+    print(f"{response.headers['X-Request-Id']}")
