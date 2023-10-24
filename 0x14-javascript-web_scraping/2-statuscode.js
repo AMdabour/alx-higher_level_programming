@@ -1,10 +1,6 @@
 #!/usr/bin/node
 const request = require('request');
 
-request.get(process.argv[2], function (error, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('code: ', response && response.statusCode);
-  }
+request.get(process.argv[2]).on('response', function (response) {
+  console.log(`code: ${response.statusCode}`);
 });
